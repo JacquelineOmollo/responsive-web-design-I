@@ -161,8 +161,7 @@ h5 {
 }
 
 .logo {
-  float: right;
-  margin-right: 50px;
+  margin-top: 25px;
 }
 
 .text-button {
@@ -269,8 +268,8 @@ footer {
 @media (max-width: 800px) {
   nav .logo {
     padding: 30px;
-    margin: 0 auto;
     text-align: center;
+    margin-top: 25px;
   }
   button {
     padding: 10px 33px;
@@ -300,7 +299,7 @@ footer {
     margin-left: 10px;
   }
   .middle-img {
-    height: 80%;
+    height: 40%;
     width: 100%;
   }
   .three-row {
@@ -312,21 +311,22 @@ footer {
 
 /* mobile */
 @media (max-width: 500px) {
-  nav .logo {
+  img .logo {
     margin-right: 50px;
     padding: 20px;
     width: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .header-img {
     display: none;
   }
-  header {
+  header .text-button {
     text-align: center;
-    width: 110%;
+    width: 100%;
     margin-right: 45px;
-    padding-right: px;
   }
   .nav-top a {
     padding: 30px 30px 30px;
@@ -347,7 +347,7 @@ footer {
     margin: 0 auto;
   }
   .middle-img {
-    height: 50%;
+    height: 35%;
     width: 100%;
     padding-bottom: 0;
   }
