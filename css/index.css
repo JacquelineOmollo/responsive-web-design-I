@@ -145,32 +145,40 @@ h5 {
 }
 
 /* My code starts here! */
-.nav-top {
-  padding: 20px;
-  text-align: center;
-  width: 100%;
+.container {
+  max-width: 880px;
   margin: 0 auto;
+  padding: 20px 1.25%;
+  display: flex;
 }
 
+.nav-top {
+  padding-top: 1em;
+}
 .nav-top a {
   text-decoration: none;
+  margin: 20px;
+  padding: 10px;
+  width: 10%;
+  display: inline-block;
   color: black;
+}
+
+img.logo {
   display: inline-block;
+  width: 130px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.header-part {
+  display: flex;
   margin: 0 auto;
-  padding: 20px 60px 20px 20px;
+  justify-content: center;
+  border-bottom: 1px solid black;
 }
 
-.logo {
-  margin-top: 25px;
-}
-
-.text-button {
-  display: inline-block;
-  margin: 0 auto;
-  width: 50%;
-}
-
-.text {
+.header-part {
   font-size: 80px;
   width: 100%;
   margin-top: 20px;
@@ -178,26 +186,18 @@ h5 {
   text-align: center;
 }
 
-button {
+.header-part button {
   background: white;
-  padding: 10px 33px;
+  padding: 10px 50px;
   font-size: 16px;
   text-align: center;
-  margin-left: 220px;
   margin-bottom: 40px;
+  margin-right: 20px;
 }
 
-.header-img {
-  display: inline-block;
+.header-part img {
   margin: 0 auto;
-  width: 45%;
-}
-
-header {
-  margin: 0 auto;
-  padding: 35px;
-  border-bottom: 1px solid black;
-  display: flex;
+  padding-left: 90px;
 }
 
 .middle-img {
@@ -207,8 +207,8 @@ header {
   margin: 0 auto;
 }
 
-.first-row {
-  display: inline-block;
+.text-content {
+  display: flex;
   margin: 0 auto;
   padding: 20px;
 }
@@ -220,32 +220,32 @@ header {
 }
 
 .container-two {
-  display: inline-block;
+  display: block;
   width: 45%;
   margin-left: 48px;
 }
 
 .second-text {
-  display: inline-block;
+  display: flex;
   padding: 20px;
   margin: 0 auto;
   border-bottom: 1px solid black;
 }
 
 .one-row {
-  display: inline-block;
+  display: block;
   width: 32%;
   margin-left: 10px;
 }
 
 .two-row {
-  display: inline-block;
+  display: block;
   width: 32%;
   margin-left: 10px;
 }
 
 .three-row {
-  display: inline-block;
+  display: block;
   width: 32%;
   margin-left: 10px;
 }
@@ -267,10 +267,21 @@ footer {
 
 /* tablet */
 @media (max-width: 800px) {
-  .logo {
-    padding: 30px;
+  .nav-top {
+    display: flex;
+  }
+  .nav-top a {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  img .logo {
     text-align: center;
-    order: -1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
   button {
     padding: 10px 33px;
@@ -282,13 +293,8 @@ footer {
   .header-img {
     display: none;
   }
-  .nav-top a {
-    display: inline-block;
-    padding: 30px 30px 20px 20px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  header {
+
+  .header-part {
     text-align: center;
     width: 85%;
     padding: 40px;
@@ -312,82 +318,85 @@ footer {
 
 /* phone */
 @media (max-width: 500px) {
-  .logo {
+  nav .logo {
     padding: 20px;
-    width: 50%;
     text-align: center;
-    order: -1;
+    margin: 0 auto;
   }
 
   .header-img {
     display: none;
   }
-  /*header .text-button {
-    text-align: center;
-    width: 100%;
-    margin-right: 45px;
+  .nav-top {
+    display: flex;
+    flex-direction: column;
   }
   .nav-top a {
-    padding: 30px 30px 30px;
-    display: inline-block;
-    width: 100%;
+    margin: 20px 20px;
+    padding: 20px;
+    align-items: center;
     border-bottom: 1px solid gray;
-  }*/
+  }
   header {
     justify-content: center;
     display: flex;
   }
 
-  header nav {
+  /*header nav {
     width: 100%;
     flex-direction: column;
     margin: 0;
     padding: 0;
-  }
+  }*/
 
-  header nav a {
+  /*header nav a {
     width: 100%;
-    display: block;
+    display: flex;
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
     border-bottom: 1px solid gray;
   }
+*/
+  .header-part div {
+    text-align: center;
+    width: 100%;
+  }
   .first-row .container-one {
     text-align: left;
     width: 95%;
-    display: block;
+
     padding-bottom: 20px;
   }
   .first-row .container-two {
     text-align: left;
     width: 95%;
     display: block;
-    margin: 0 auto;
   }
   .middle-img {
-    height: 20%;
+    height: 50%;
     width: 100%;
     padding-bottom: 0;
   }
+  section .second-text {
+    display: flex;
+  }
   .second-text .one-row {
-    text-align: left;
+    flex-direction: column;
     width: 100%;
-    display: block;
     padding: 20px;
-    margin: 0;
+    justify-content: flex-start;
   }
   .second-text .two-row {
-    text-align: left;
+    flex-direction: column;
     width: 100%;
-    display: block;
     padding: 20px;
-    margin: 0;
+    justify-content: flex-start;
   }
   .second-text .three-row {
-    text-align: left;
+    flex-direction: column;
     width: 100%;
-    display: block;
     padding: 20px;
+    justify-content: flex-start;
   }
 }
